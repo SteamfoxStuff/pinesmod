@@ -1,0 +1,22 @@
+public class ModItems {
+
+  public static Item president_key;
+	
+	public static void init() {
+	  president_key = new Item().setUnlocalizedName("president_key").setCreativeTab(PinesMod.tabPinesMod);
+	}
+	
+	public static void register()
+	{
+	  GameRegistry.registerItem(president_key, president_key.getUnlocalizedName().substring(5));
+  }
+  
+  public static void registerRenders()
+	{
+	  registerRender(president_key);
+	}
+	
+	public static void registerRender(Item item)
+	{
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
