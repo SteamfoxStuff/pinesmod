@@ -1,0 +1,12 @@
+public class PinesModTab extends CreativeTabs{
+
+	public PinesModTab(String label) {
+		super(label);
+	}
+
+	@Override
+	public Item getTabIconItem() {
+		return ModItems.third_journal;
+	}
+
+}
