@@ -1,17 +1,17 @@
 public class ModItems {
 
-  public static Item president_key;
+  	public static Item president_key;
 	
 	public static void init() {
-	  president_key = new Item().setUnlocalizedName("president_key").setCreativeTab(PinesMod.tabPinesMod);
+	  president_key = new ItemPresidentsKey().setUnlocalizedName("president_key").setCreativeTab(PinesMod.tabPinesMod);
 	}
 	
 	public static void register()
 	{
 	  GameRegistry.registerItem(president_key, president_key.getUnlocalizedName().substring(5));
-  }
+  	}
   
-  public static void registerRenders()
+  	public static void registerRenders()
 	{
 	  registerRender(president_key);
 	}
